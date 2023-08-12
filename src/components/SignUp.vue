@@ -61,11 +61,16 @@ export default {
       });
       console.log(result);
       if (result.status == 201) {
-        alert("signup successfully");
+        localStorage.setItem("user-info", JSON.stringify(result.data));
+        this.$router.push({ name: "Home" });
       }
-      localStorage.setItem("user-info", JSON.stringify(result.data));
-      this.$router.push({ name: "Home" });
     },
+  },
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "Home" });
+    }
   },
 };
 </script>
