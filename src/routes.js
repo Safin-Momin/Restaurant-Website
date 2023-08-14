@@ -13,6 +13,21 @@ const routes = [
     path: "/signup",
     component: SignUp,
   },
+  {
+    name: "Login",
+    path: "/login",
+    component: () => import("./components/Login.vue"),
+  },
+  {
+    name: "Add",
+    path: "/add",
+    component: () => import("./components/Add.vue"),
+  },
+  {
+    name: "Update",
+    path: "/update/:id",
+    component: () => import("./components/Update.vue"),
+  },
 ];
 
 const router = createRouter({
