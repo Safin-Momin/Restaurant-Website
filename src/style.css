@@ -37,3 +37,7 @@ td {
 svg {
   @apply stroke-2 w-6 h-6;
 }
+
+div > div.red {
+  @apply text-red-500 font-normal text-base -my-5 text-center;
+}

@@ -10,8 +10,8 @@ export default {
   name: "Header",
   methods: {
     logout() {
-      localStorage.clear();
       this.$router.push({ name: "Login" });
+      localStorage.clear();
     },
   },
 };
